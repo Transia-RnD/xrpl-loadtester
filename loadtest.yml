@@ -1,0 +1,19 @@
+config:
+    target: "wss://icv2.ws.transia.co"
+    processor: "./xrpl.test.js"
+    ensure:
+      maxErrorRate: 1
+    phases:
+      - duration: 20
+        arrivalRate: 5
+        rampTo: 2
+        name: "Warming up"
+      - duration: 80
+        arrivalRate: 100
+        rampTo: 100
+        name: "Max load"
+scenarios:
+  - engine: ws
+    flow:
+      - function: "createPayment"
+      - send: "{{ data }}"

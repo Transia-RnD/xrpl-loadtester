@@ -1,0 +1,48 @@
+*.db
+__pycache__
+.idea/*
+*.pyc
+tmp
+.idea/
+/.eggs
+logs/
+
+
+# PyTest #
+######################
+.pytest_cache
+.env
+
+# dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+# /dist
+public/index.html.gz
+/build
+
+# misc
+.DS_Store
+.DS_Store?
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+
+# artillery generated files
+result.html
+result.json
